@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakartvelo Estates | Premier Georgian Real Estate</title>
+    <meta name="description" content="Discover luxury properties in Georgia. From Tbilisi penthouses to Batumi villas. Trusted local experts.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="loader-logo">Sakartvelo Estates</div>
+        <div class="loader-bar"></div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fa-solid fa-kaaba"></i> Sakartvelo Estates
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#featured" class="nav-link">Properties</a></li>
+                <li class="nav-item"><a href="#calculator" class="nav-link">Mortgage</a></li>
+                <li class="nav-item"><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item cta-item">
+                    <a href="#consultation" class="nav-link btn-gold">Book Consultation</a>
+                </li>
+            </ul>
+            <div class="nav-controls">
+                <button id="favorites-btn" class="icon-btn" title="Saved Properties">
+                    <i class="far fa-heart"></i>
+                    <span class="badge" id="fav-count">0</span>
+                </button>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1594911765089-8d726b245367?q=80&w=2500&auto=format&fit=crop" alt="Tbilisi View" class="hero-image parallax">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content" data-aos="fade-up">
+            <span class="hero-label">Luxury Living in the Caucasus</span>
+            <h1 class="hero-title">Find Your Home in <br> <span class="text-gold">Georgia</span></h1>
+            <p class="hero-subtitle">From the historic streets of Old Tbilisi to the sunny shores of Batumi. We connect you with Georgia's finest real estate.</p>
+            
+            <div class="search-bar">
+                <div class="search-input">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search Tbilisi, Batumi, Kutaisi...">
+                </div>
+                <button class="btn btn-primary">Search</button>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-text">Years in Market</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">500M+</span>
+                    <span class="stat-text">GEL Sold</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">2k+</span>
+                    <span class="stat-text">Happy Clients</span>
+                </div>
+            </div>
+        </div>
+        <a href="#featured" class="scroll-down">
+            <div class="mouse"></div>
+        </a>
+    </section>
+
+    <section id="featured" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Exclusive Listings</span>
+                <h2>Featured Georgian Homes</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="filter-tabs" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="tbilisi">Tbilisi</button>
+                <button class="filter-btn" data-filter="batumi">Batumi</button>
+                <button class="filter-btn" data-filter="countryside">Countryside</button>
+            </div>
+
+            <div class="properties-grid" id="properties-grid">
+                <div class="property-card" data-category="tbilisi" data-aos="fade-up">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1628151016024-2c7009477218?q=80&w=800&auto=format&fit=crop" alt="Vake Apartment">
+                        <div class="card-badges">
+                            <span class="badge-status">For Sale</span>
+                            <span class="badge-featured">Premium</span>
+                        </div>
+                        <button class="card-fav-btn" onclick="toggleFavorite(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <div class="card-price">$350,000</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-location">
+                            <i class="fas fa-map-marker-alt"></i> Vake, Tbilisi
+                        </div>
+                        <h3 class="card-title">Modern Vake Residence</h3>
+                        <div class="card-features">
+                            <span><i class="fas fa-bed"></i> 3 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-vector-square"></i> 180 m²</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="agent-mini">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=100&auto=format&fit=crop" alt="Nino">
+                                <span>Nino B.</span>
+                            </div>
+                            <a href="#" class="btn-link">Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card" data-category="batumi" data-aos="fade-up" data-delay="100">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=800&auto=format&fit=crop" alt="Batumi Condo">
+                        <div class="card-badges">
+                            <span class="badge-status">For Rent</span>
+                        </div>
+                        <button class="card-fav-btn" onclick="toggleFavorite(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <div class="card-price">$1,200<span>/mo</span></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-location">
+                            <i class="fas fa-map-marker-alt"></i> Seafront, Batumi
+                        </div>
+                        <h3 class="card-title">Black Sea Panorama</h3>
+                        <div class="card-features">
+                            <span><i class="fas fa-bed"></i> 2 Beds</span>
+                            <span><i class="fas fa-bath"></i> 1 Bath</span>
+                            <span><i class="fas fa-vector-square"></i> 95 m²</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="agent-mini">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop" alt="Giorgi">
+                                <span>Giorgi T.</span>
+                            </div>
+                            <a href="#" class="btn-link">Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card" data-category="countryside" data-aos="fade-up" data-delay="200">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop" alt="Kakheti House">
+                        <div class="card-badges">
+                            <span class="badge-status">New</span>
+                        </div>
+                        <button class="card-fav-btn" onclick="toggleFavorite(this)">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <div class="card-price">$180,000</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-location">
+                            <i class="fas fa-map-marker-alt"></i> Signagi, Kakheti
+                        </div>
+                        <h3 class="card-title">Vineyard Villa</h3>
+                        <div class="card-features">
+                            <span><i class="fas fa-bed"></i> 4 Beds</span>
+                            <span><i class="fas fa-bath"></i> 2 Baths</span>
+                            <span><i class="fas fa-vector-square"></i> 300 m²</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="agent-mini">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=100&auto=format&fit=crop" alt="Nino">
+                                <span>Nino B.</span>
+                            </div>
+                            <a href="#" class="btn-link">Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="center-btn" data-aos="fade-up">
+                <a href="#" class="btn btn-outline">View All Listings</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="section bg-card-dark">
+        <div class="container">
+            <div class="calculator-wrapper" data-aos="fade-up">
+                <div class="calc-content">
+                    <span class="section-subtitle">Financial Planning</span>
+                    <h2>Mortgage Calculator</h2>
+                    <p>Calculate your estimated monthly payments in Georgia. Interest rates typically range from 5% to 10%.</p>
+                    
+                    <div class="calc-summary">
+                        <div class="summary-item">
+                            <span class="label">Est. Monthly Payment</span>
+                            <span class="value main-value" id="monthly-payment">$0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calc-form">
+                    <div class="form-group">
+                        <label>Property Price ($)</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                            <input type="number" id="home-price" value="150000">
+                        </div>
+                        <input type="range" min="30000" max="1000000" step="5000" id="home-price-range" value="150000">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Down Payment ($)</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                                <input type="number" id="down-payment" value="30000">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Interest Rate (%)</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-percentage"></i>
+                                <input type="number" id="interest-rate" value="7.5" step="0.1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Loan Term (Years)</label>
+                        <select id="loan-term">
+                            <option value="15">15 Years</option>
+                            <option value="10">10 Years</option>
+                            <option value="5">5 Years</option>
+                            <option value="20">20 Years</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-full" onclick="calculateMortgage()">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Client Stories</span>
+                <h2>What Our Clients Say</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="testimonials-slider" data-aos="fade-up">
+                <div class="testimonial-card active">
+                    <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                    <p class="testimonial-text">"Sakartvelo Estates helped us find the perfect apartment in Old Tbilisi. Their knowledge of the local market is incredible."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=100&auto=format&fit=crop" alt="Client">
+                        <div>
+                            <h4>Davit Kapanadze</h4>
+                            <span>Purchased in Tbilisi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="consultation" class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-box" data-aos="zoom-in">
+                <h2>Invest in Georgia's Future</h2>
+                <p>Schedule a meeting at our Rustaveli Avenue office or a video call.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-gold">Contact Us</a>
+                    <a href="tel:+995555123456" class="btn btn-white-outline"><i class="fas fa-phone"></i> +995 555 12 34 56</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-right">
+                    <span class="section-subtitle">Get in Touch</span>
+                    <h2>Visit Our Office</h2>
+                    <p>We are located in the heart of Tbilisi. Coffee is on us!</p>
+                    
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Address</h4>
+                                <p>12 Shota Rustaveli Ave, Tbilisi, Georgia</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@sakartveloestates.ge</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+995 32 2 123 456</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form" data-aos="fade-left">
+                    <h3>Send Us a Message</h3>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <select>
+                            <option>Interest: Buying</option>
+                            <option>Interest: Selling</option>
+                            <option>Interest: Renting</option>
+                            <option>Interest: Investment/Citizenship</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Message (English or Georgian)" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2>Sakartvelo Estates</h2>
+                    <p>Your trusted guide to real estate in the Caucasus region.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Properties</h4>
+                    <ul>
+                        <li><a href="#">Tbilisi Central</a></li>
+                        <li><a href="#">Batumi Resorts</a></li>
+                        <li><a href="#">Kakheti Vineyards</a></li>
+                        <li><a href="#">Gudauri Ski Chalets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Property Management</a></li>
+                        <li><a href="#">Legal Support</a></li>
+                        <li><a href="#">Renovation</a></li>
+                        <li><a href="#">Investment Tours</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for latest Georgian market news.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sakartvelo Estates. Made in Georgia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
